@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="LogEntry" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/log_entry.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+log_id = "log_010_hadid_abort"
+title = "Mission Abort — Emergency Protocol EVENTIDE"
+author = "Hadid, R. — Station Commander"
+date = "Station Day 881"
+content = "This is Commander Hadid declaring Mission Abort under Emergency Protocol EVENTIDE.
+
+78% of observable sky from Kairos is now dark. Earth is silent. All relay stations silent. Vey's signal has increased in intensity by a factor of 400 since first contact and is now detectable on EVERY frequency simultaneously. Corvan is unresponsive. Alcott reports hull temperature anomalies spreading across the station.
+
+I am arming the emergency broadband relay for a final transmission to any surviving outpost. If you are receiving this: do not send a signal. Do not reply. Do not look at the dark for too long.
+
+Something in the void looked back, and it is coming.
+
+God help us all.
+
+Hadid out."
+category = "final"
+sort_order = 10

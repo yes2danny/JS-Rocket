@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://main_scene"]
+
+[ext_resource type="PackedScene" uid="uid://player_scene" path="res://scenes/player/player.tscn" id="1_player"]
+[ext_resource type="PackedScene" uid="uid://station_kairos" path="res://scenes/levels/station_kairos.tscn" id="2_level"]
+[ext_resource type="PackedScene" uid="uid://hud_scene" path="res://scenes/ui/hud.tscn" id="3_hud"]
+[ext_resource type="PackedScene" uid="uid://log_viewer_scene" path="res://scenes/ui/log_viewer.tscn" id="4_log_viewer"]
+[ext_resource type="PackedScene" uid="uid://pause_menu_scene" path="res://scenes/ui/pause_menu.tscn" id="5_pause_menu"]
+
+[sub_resource type="Environment" id="Environment_main"]
+background_mode = 1
+background_color = Color(0, 0, 0, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.02, 0.02, 0.04, 1)
+ambient_light_energy = 0.3
+tonemap_mode = 2
+tonemap_exposure = 0.8
+glow_enabled = true
+glow_intensity = 0.4
+glow_bloom = 0.1
+fog_enabled = true
+fog_light_color = Color(0.01, 0.01, 0.02, 1)
+fog_density = 0.02
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.03
+volumetric_fog_albedo = Color(0.01, 0.01, 0.02, 1)
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_main")
+
+[node name="StationKairos" parent="." instance=ExtResource("2_level")]
+
+[node name="Player" parent="." instance=ExtResource("1_player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="HUD" parent="." instance=ExtResource("3_hud")]
+
+[node name="LogViewer" parent="." instance=ExtResource("4_log_viewer")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("5_pause_menu")]

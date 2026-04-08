@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="LogEntry" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/log_entry.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+log_id = "log_007_vey_responsive"
+title = "It Responded"
+author = "Vey, S. — Xenosignal Analyst"
+date = "Station Day 876"
+content = "It responded.
+
+I sent the calibration pulse. Standard galactic greeting protocol. Mathematical primes, hydrogen line reference, nothing exotic.
+
+Within 4.2 seconds — FOUR POINT TWO SECONDS — we received a return signal. Modified. It took our structure and... added to it. Completed the mathematical sequence and then continued with patterns I don't recognize.
+
+4.2 seconds. The signal origin is 200 light-years away. That's not a response. That's not possible. Unless it's not 200 light-years away. Unless it's everywhere. Unless it was already listening.
+
+My hands won't stop shaking."
+category = "late"
+sort_order = 7

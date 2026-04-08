@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="LogEntry" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/log_entry.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+log_id = "log_004_vey_signal"
+title = "The Signal"
+author = "Vey, S. — Xenosignal Analyst"
+date = "Station Day 862"
+content = "The 14.6 GHz signal is NOT instrumental. I've ruled out every local source. It's not Kairos. It's not solar. It's not any catalogued pulsar or quasar in the database.
+
+It has structure. Not random noise. Not natural. There's a repeating motif buried in the carrier — a pattern that almost looks like a response template. As if it's waiting for input.
+
+I've requested permission to transmit a calibration pulse toward the signal origin. Hadid is reviewing.
+
+I can't stop thinking about it."
+category = "middle"
+sort_order = 4

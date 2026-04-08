@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://switch_scene"]
+
+[ext_resource type="Script" path="res://scripts/interactables/switch.gd" id="1_switch"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_switch"]
+size = Vector3(0.3, 0.4, 0.15)
+
+[sub_resource type="StandardMaterial3D" id="Material_switch_base"]
+albedo_color = Color(0.1, 0.1, 0.12, 1)
+metallic = 0.6
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="Material_lever"]
+albedo_color = Color(0.6, 0.15, 0.1, 1)
+metallic = 0.5
+roughness = 0.3
+
+[node name="Switch" type="StaticBody3D"]
+script = ExtResource("1_switch")
+interaction_prompt = "Flip Switch"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+shape = SubResource("BoxShape3D_switch")
+
+[node name="BaseMesh" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+size = Vector3(0.3, 0.4, 0.1)
+material = SubResource("Material_switch_base")
+
+[node name="LeverMesh" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -0.06)
+size = Vector3(0.06, 0.2, 0.06)
+material = SubResource("Material_lever")

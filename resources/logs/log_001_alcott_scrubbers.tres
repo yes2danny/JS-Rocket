@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="LogEntry" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/log_entry.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+log_id = "log_001_alcott_scrubbers"
+title = "Scrubber Maintenance"
+author = "Alcott, M. — Engineer"
+date = "Station Day 847"
+content = "Replaced the filters on scrubber bank 3C today. Running about two weeks ahead of schedule, but they were already showing particulate buildup beyond normal parameters. Kairos may be state of the art, but she breathes hard.
+
+Requisitioned backup filters from the next supply run. Not that anyone reads these forms anymore.
+
+Alcott out."
+category = "early"
+sort_order = 1

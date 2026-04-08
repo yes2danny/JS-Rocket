@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="LogEntry" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/log_entry.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+log_id = "log_009_corvan_staring"
+title = "[no subject]"
+author = "Corvan, J. — Stellar Observer"
+date = "Station Day 880"
+content = "It's beautiful.
+
+I can see it now. Not with the instruments. With my eyes. The edge of the dark. It moves like something breathing.
+
+I think the darkness between the stars was never empty.
+
+I think it was always full. We just couldn't see what was filling it until it started to move.
+
+I'm going to stay here at the window. I think it sees me too."
+category = "final"
+sort_order = 9

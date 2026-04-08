@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="LogEntry" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/log_entry.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+log_id = "log_002_corvan_observation"
+title = "First Observation"
+author = "Corvan, J. — Stellar Observer"
+date = "Station Day 851"
+content = "Calibrated the Deckard array this morning. All nominal. Barnard's Star holding steady at magnitude 9.54.
+
+I love the quiet out here. You can almost forget how far from home we are. Almost. On clear shifts I just sit and watch the field. Stars everywhere. More stars than darkness.
+
+That's how it should be."
+category = "early"
+sort_order = 2
