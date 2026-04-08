@@ -14,12 +14,11 @@ roughness = 0.4
 size = Vector3(1.6, 2.6, 0.1)
 
 ; =================================================================
-; DOOR — How to plug in your own door model:
-;   Frame: Replace children of "PlaceholderFrame" with your door frame model.
-;   Panel: Replace children of "DoorPanel" (keep DoorPanel itself — it moves).
-;          Put your sliding panel mesh + a CollisionShape3D inside DoorPanel.
-;   The script moves DoorPanel on Y axis. Anything inside it slides with it.
-;   Resize CollisionShape3D (root level) to match your frame for raycast.
+; DOOR — now supports access panel integration.
+; ColorStrip glows with door_color (matches the cable + panel).
+; CableAnchor is where the physics cable connects.
+; DoorPanel slides up — anything inside moves with it.
+; Set use_panel_only = true to require the access panel.
 ; =================================================================
 
 [node name="Door" type="StaticBody3D"]
@@ -41,6 +40,10 @@ size = Vector3(2.0, 3.0, 0.3)
 operation = 2
 size = Vector3(1.6, 2.6, 0.4)
 
+[node name="ColorStrip" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.85, -0.12)
+size = Vector3(1.8, 0.06, 0.06)
+
 [node name="DoorPanel" type="Node3D" parent="."]
 
 [node name="PlaceholderPanelMesh" type="CSGBox3D" parent="DoorPanel"]
@@ -51,3 +54,6 @@ material = SubResource("Material_door_panel")
 [node name="PanelCollision" type="CollisionShape3D" parent="DoorPanel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
 shape = SubResource("BoxShape3D_panel")
+
+[node name="CableAnchor" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 2.0, -0.12)

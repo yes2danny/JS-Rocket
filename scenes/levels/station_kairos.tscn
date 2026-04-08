@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://station_kairos"]
+[gd_scene load_steps=20 format=3 uid="uid://station_kairos"]
 
 [ext_resource type="Material" path="res://resources/materials/wall_dark.tres" id="1_wall"]
 [ext_resource type="Material" path="res://resources/materials/floor_grate.tres" id="2_floor"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://log_pickup_scene" path="res://scenes/interactables/log_pickup.tscn" id="7_log_pickup"]
 [ext_resource type="PackedScene" uid="uid://flickering_light_scene" path="res://scenes/environment/flickering_light.tscn" id="8_flicker"]
 [ext_resource type="Material" path="res://resources/materials/emergency_light.tres" id="9_emergency"]
+[ext_resource type="PackedScene" uid="uid://access_panel_scene" path="res://scenes/interactables/access_panel.tscn" id="10_panel"]
+[ext_resource type="PackedScene" uid="uid://physics_cable_scene" path="res://scenes/environment/physics_cable.tscn" id="11_cable"]
 
 [sub_resource type="StandardMaterial3D" id="Material_void_window"]
 albedo_color = Color(0.0, 0.0, 0.0, 1)
@@ -599,11 +601,13 @@ use_collision = true
 size = Vector3(0.08, 2.5, 6.0)
 material = SubResource("Material_void_window")
 
-; Locked door to observation deck
+; Locked door to observation deck — RED, requires power, panel only
 [node name="DoorObservation" parent="ObservationDeck" instance=ExtResource("4_door")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1, 0, 0)
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 5.1, 0, 0)
 requires_condition = "power_restored"
 door_id = "observation_door"
+door_color = Color(0.9, 0.1, 0.1, 1)
+use_panel_only = true
 
 ; Terminal — Corvan observation log
 [node name="TerminalCorvan" parent="ObservationDeck" instance=ExtResource("5_terminal")]
@@ -627,6 +631,96 @@ light_color = Color(0.15, 0.15, 0.35, 1)
 light_energy = 0.2
 shadow_enabled = true
 omni_range = 8.0
+
+; =============================================
+; DOORS — one per corridor entrance from hub
+; =============================================
+
+; NORTH door (Hub → Bridge) — GREEN
+[node name="DoorNorth" parent="." instance=ExtResource("4_door")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.1)
+door_id = "bridge_door"
+door_color = Color(0.1, 0.85, 0.3, 1)
+use_panel_only = true
+
+; SOUTH door (Hub → Engineering) — ORANGE
+[node name="DoorSouth" parent="." instance=ExtResource("4_door")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.1)
+door_id = "engineering_door"
+door_color = Color(1.0, 0.5, 0.1, 1)
+use_panel_only = true
+
+; EAST door (Hub → Crew Quarters) — BLUE
+[node name="DoorEast" parent="." instance=ExtResource("4_door")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 5.1, 0, 0)
+door_id = "crew_quarters_door"
+door_color = Color(0.2, 0.5, 1.0, 1)
+use_panel_only = true
+
+; =============================================
+; ACCESS PANELS — color-matched to their doors
+; Player must find the right panel to open each door
+; =============================================
+
+; GREEN panel for Bridge door — on hub north wall, right of doorway
+[node name="PanelNorth" parent="." instance=ExtResource("10_panel")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 1.8, 1.2, -4.95)
+target_door_path = NodePath("../DoorNorth")
+panel_color = Color(0.1, 0.85, 0.3, 1)
+
+; ORANGE panel for Engineering door — on hub south wall, left of doorway
+[node name="PanelSouth" parent="." instance=ExtResource("10_panel")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, 1.2, 4.95)
+target_door_path = NodePath("../DoorSouth")
+panel_color = Color(1.0, 0.5, 0.1, 1)
+
+; BLUE panel for Crew Quarters door — on hub east wall, beside doorway
+[node name="PanelEast" parent="." instance=ExtResource("10_panel")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 4.95, 1.2, -1.8)
+target_door_path = NodePath("../DoorEast")
+panel_color = Color(0.2, 0.5, 1.0, 1)
+
+; RED panel for Observation door — in west corridor, near observation end
+[node name="PanelObservation" parent="CorridorWest" instance=ExtResource("10_panel")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -2.5, 1.2, -1.3)
+target_door_path = NodePath("../../ObservationDeck/DoorObservation")
+panel_color = Color(0.9, 0.1, 0.1, 1)
+
+; =============================================
+; PHYSICS CABLES — real physics ropes connecting
+; each panel to its door. Color matches for the puzzle.
+; =============================================
+
+[node name="Cables" type="Node3D" parent="."]
+
+; GREEN cable — Panel North → Door North
+[node name="CableNorth" parent="Cables" instance=ExtResource("11_cable")]
+start_anchor_path = NodePath("../../PanelNorth/CableAnchor")
+end_anchor_path = NodePath("../../DoorNorth/CableAnchor")
+cable_color = Color(0.1, 0.85, 0.3, 1)
+segment_count = 8
+
+; ORANGE cable — Panel South → Door South
+[node name="CableSouth" parent="Cables" instance=ExtResource("11_cable")]
+start_anchor_path = NodePath("../../PanelSouth/CableAnchor")
+end_anchor_path = NodePath("../../DoorSouth/CableAnchor")
+cable_color = Color(1.0, 0.5, 0.1, 1)
+segment_count = 8
+
+; BLUE cable — Panel East → Door East
+[node name="CableEast" parent="Cables" instance=ExtResource("11_cable")]
+start_anchor_path = NodePath("../../PanelEast/CableAnchor")
+end_anchor_path = NodePath("../../DoorEast/CableAnchor")
+cable_color = Color(0.2, 0.5, 1.0, 1)
+segment_count = 8
+
+; RED cable — Panel Observation (in corridor) → Door Observation (in obs deck)
+[node name="CableObservation" parent="Cables" instance=ExtResource("11_cable")]
+start_anchor_path = NodePath("../../CorridorWest/PanelObservation/CableAnchor")
+end_anchor_path = NodePath("../../ObservationDeck/DoorObservation/CableAnchor")
+cable_color = Color(0.9, 0.1, 0.1, 1)
+segment_count = 12
+initial_sag = 0.3
 
 ; =============================================
 ; SPAWN POINT

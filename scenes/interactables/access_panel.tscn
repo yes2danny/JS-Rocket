@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://access_panel_scene"]
+
+[ext_resource type="Script" path="res://scripts/interactables/access_panel.gd" id="1_panel"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_panel"]
+size = Vector3(0.4, 0.5, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="Material_panel_body"]
+albedo_color = Color(0.06, 0.06, 0.08, 1)
+metallic = 0.6
+roughness = 0.5
+
+; =================================================================
+; ACCESS PANEL — wall-mounted panel that opens a linked door.
+; Set target_door_path in the inspector to link to a door.
+; Set panel_color to match the cable + door color strip.
+; To swap model: replace children of PlaceholderModel.
+; CableAnchor is where the physics cable connects.
+; =================================================================
+
+[node name="AccessPanel" type="StaticBody3D"]
+script = ExtResource("1_panel")
+interaction_prompt = "Use Access Panel"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+shape = SubResource("BoxShape3D_panel")
+
+[node name="PlaceholderModel" type="Node3D" parent="."]
+
+[node name="PanelBase" type="CSGBox3D" parent="PlaceholderModel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
+size = Vector3(0.4, 0.5, 0.08)
+material = SubResource("Material_panel_body")
+
+[node name="ColorStrip" type="CSGBox3D" parent="PlaceholderModel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.47, -0.02)
+size = Vector3(0.35, 0.06, 0.06)
+
+[node name="CableAnchor" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22, 0.35, 0)
