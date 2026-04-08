@@ -13,6 +13,15 @@ roughness = 0.4
 [sub_resource type="BoxShape3D" id="BoxShape3D_panel"]
 size = Vector3(1.6, 2.6, 0.1)
 
+; =================================================================
+; DOOR — How to plug in your own door model:
+;   Frame: Replace children of "PlaceholderFrame" with your door frame model.
+;   Panel: Replace children of "DoorPanel" (keep DoorPanel itself — it moves).
+;          Put your sliding panel mesh + a CollisionShape3D inside DoorPanel.
+;   The script moves DoorPanel on Y axis. Anything inside it slides with it.
+;   Resize CollisionShape3D (root level) to match your frame for raycast.
+; =================================================================
+
 [node name="Door" type="StaticBody3D"]
 script = ExtResource("1_door")
 interaction_prompt = "Open Door"
@@ -21,18 +30,20 @@ interaction_prompt = "Open Door"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 shape = SubResource("BoxShape3D_frame")
 
-[node name="DoorFrame" type="CSGBox3D" parent="."]
+[node name="PlaceholderFrame" type="Node3D" parent="."]
+
+[node name="DoorFrame" type="CSGBox3D" parent="PlaceholderFrame"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 use_collision = false
 size = Vector3(2.0, 3.0, 0.3)
 
-[node name="DoorFrameCutout" type="CSGBox3D" parent="DoorFrame"]
+[node name="DoorFrameCutout" type="CSGBox3D" parent="PlaceholderFrame/DoorFrame"]
 operation = 2
 size = Vector3(1.6, 2.6, 0.4)
 
 [node name="DoorPanel" type="Node3D" parent="."]
 
-[node name="PanelMesh" type="CSGBox3D" parent="DoorPanel"]
+[node name="PlaceholderPanelMesh" type="CSGBox3D" parent="DoorPanel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
 size = Vector3(1.5, 2.5, 0.08)
 material = SubResource("Material_door_panel")

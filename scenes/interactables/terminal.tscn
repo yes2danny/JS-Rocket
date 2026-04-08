@@ -16,6 +16,14 @@ emission_enabled = true
 emission = Color(0.0, 0.4, 0.25, 1)
 emission_energy_multiplier = 1.5
 
+; =================================================================
+; TERMINAL — How to plug in your own PC model:
+;   1. Delete the children of "PlaceholderModel" (Body + Screen)
+;   2. Drag your .glb/.tscn model as a child of PlaceholderModel
+;   3. Resize CollisionShape3D to match your model's bounds
+;   The script has ZERO references to visual nodes — it just works.
+; =================================================================
+
 [node name="Terminal" type="StaticBody3D"]
 script = ExtResource("1_terminal")
 interaction_prompt = "Read Terminal"
@@ -24,12 +32,14 @@ interaction_prompt = "Read Terminal"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 shape = SubResource("BoxShape3D_terminal")
 
-[node name="Body" type="CSGBox3D" parent="."]
+[node name="PlaceholderModel" type="Node3D" parent="."]
+
+[node name="Body" type="CSGBox3D" parent="PlaceholderModel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 size = Vector3(0.8, 0.6, 0.4)
 material = SubResource("Material_terminal_body")
 
-[node name="Screen" type="CSGBox3D" parent="."]
+[node name="Screen" type="CSGBox3D" parent="PlaceholderModel"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, -0.18)
 size = Vector3(0.6, 0.35, 0.05)
 material = SubResource("Material_terminal_screen")

@@ -1,11 +1,15 @@
 extends InteractableBase
 ## Wall switch that sets a condition in GameManager when toggled.
+## To swap in your own model: replace the children of PlaceholderModel.
+## The LeverPivot node is rotated by the script — put your lever mesh inside it.
 
 @export var switch_id: String = ""
 @export var condition_to_set: String = ""
 @export var is_on: bool = false
+@export var on_rotation: float = 30.0
+@export var off_rotation: float = -30.0
 
-@onready var lever_mesh: CSGBox3D = $LeverMesh
+@onready var lever_pivot: Node3D = get_node_or_null("LeverPivot")
 
 
 func _ready() -> void:
@@ -23,5 +27,5 @@ func interact() -> void:
 
 
 func _update_visual() -> void:
-	if lever_mesh:
-		lever_mesh.rotation_degrees.x = 30.0 if is_on else -30.0
+	if lever_pivot:
+		lever_pivot.rotation_degrees.x = on_rotation if is_on else off_rotation
