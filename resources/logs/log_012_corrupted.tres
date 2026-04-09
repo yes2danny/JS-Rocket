@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="LogEntry" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/log_entry.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+log_id = "log_012_corrupted"
+title = "CORRUPTED — Cycle ???"
+author = "Unknown"
+date = "Cycle ???"
+content = "[DATA INTEGRITY: 19%]
+
+...not coming from somewhere else. I think it was always here. I think it's part of the...
+
+...between the stars. Not traveling through space. The signal is the s...
+
+...can't find Rin. Tools in bay 4 but she's...
+
+...whoever reads this — don't touch the relay. Don't send our position. It doesn't want us. It wants to know where...
+
+[END RECOVERED DATA]"
+category = "final"
+sort_order = 12

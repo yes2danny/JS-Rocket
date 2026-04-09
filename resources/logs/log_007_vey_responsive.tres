@@ -5,17 +5,17 @@
 [resource]
 script = ExtResource("1_script")
 log_id = "log_007_vey_responsive"
-title = "It Responded"
-author = "Vey, S. — Xenosignal Analyst"
-date = "Station Day 876"
-content = "It responded.
+title = "Personal Log — Cycle 303"
+author = "Dr. E. Corvan — Research"
+date = "Cycle 303"
+content = "I've given up photographing the view from observation. Not because it isn't remarkable — it is — but because there's something about it that doesn't survive being captured. In a photo it's just dark. In person it feels like... I keep coming back to the word \"finished.\" Like the dark out there isn't empty. It's complete. It doesn't need anything in it.
 
-I sent the calibration pulse. Standard galactic greeting protocol. Mathematical primes, hydrogen line reference, nothing exotic.
+That's not scientific. I know that. I'm allowing myself one unscientific observation per log entry as a treat.
 
-Within 4.2 seconds — FOUR POINT TWO SECONDS — we received a return signal. Modified. It took our structure and... added to it. Completed the mathematical sequence and then continued with patterns I don't recognize.
+Tomas played me an audio render of the signal yesterday. He converted the low-band structure into audible frequencies and wanted my reaction. I sat with it for a while. I didn't have an immediate analysis. The closest I can describe it: you know when you're alone in a house and you're suddenly certain there's someone in the next room? Not because you heard anything. You just know. It sounded like that feeling. Like the space right before someone speaks.
 
-4.2 seconds. The signal origin is 200 light-years away. That's not a response. That's not possible. Unless it's not 200 light-years away. Unless it's everywhere. Unless it was already listening.
+I told Tomas to keep working on it. He didn't seem satisfied with that answer.
 
-My hands won't stop shaking."
+I went back to observation after. Stayed about two hours. Meant to stay twenty minutes."
 category = "late"
 sort_order = 7

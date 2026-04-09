@@ -5,17 +5,15 @@
 [resource]
 script = ExtResource("1_script")
 log_id = "log_005_corvan_darkness"
-title = "The Darkness"
-author = "Corvan, J. — Stellar Observer"
-date = "Station Day 869"
-content = "Something is wrong with the survey.
+title = "Station Log — Cycle 269"
+author = "Cmdr. N. Hadid — Commander"
+date = "Cycle 269"
+content = "Addendum.
 
-Sector 7G-North — I'm showing ZERO stellar objects where last week there were 1,447. Not occulted. Not shifted. Gone. The background field in that region reads absolute black.
+Corvan flagged a discrepancy in the long-range imaging data. Fourteen stellar objects from our Cycle 003 baseline are no longer visible. She's requested a diagnostic on the optical array. Alcott has been assigned.
 
-I've recalibrated three times. The instruments are fine.
+Likely sensor drift. Logging for completeness.
 
-The stars are vanishing.
-
-I've informed Hadid. She thinks it's a sensor malfunction. It's not. I can see it with my own eyes from the observation deck. There's a patch of sky that's just... empty. And it's growing."
+Earth still hasn't acknowledged our Cycle 198 request. Week 8. I've sent a follow-up."
 category = "middle"
 sort_order = 5

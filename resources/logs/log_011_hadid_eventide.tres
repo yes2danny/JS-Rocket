@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="LogEntry" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/log_entry.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+log_id = "log_011_hadid_eventide"
+title = "Station Log — Cycle 352"
+author = "Cmdr. N. Hadid — Commander"
+date = "Cycle 352"
+content = "I am declaring a mission abort effective immediately.
+
+Outbound communications have not been confirmed received since Cycle 260. Ninety-two days. The equipment works. The signals leave. Nothing comes back.
+
+Stellar absence count: forty-four. The rate is accelerating.
+
+Vey has insisted all signal monitoring equipment be powered down immediately. I have approved this. His formal reasoning is in a sealed personal log. He asked me not to read it. I won't.
+
+I am directing Alcott to prepare the emergency relay for a one-shot burst transmission. Maximum power. Aimed at the nearest transit beacon. It will contain our coordinates, mission data, and my personal recommendation that this sector be permanently quarantined.
+
+This is the last option available to us. Alcott will make it work. She always does.
+
+After that, we wait. And we hope someone is still listening on the other end."
+category = "final"
+sort_order = 11

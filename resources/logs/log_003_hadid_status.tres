@@ -5,12 +5,15 @@
 [resource]
 script = ExtResource("1_script")
 log_id = "log_003_hadid_status"
-title = "Weekly Status — Command"
-author = "Hadid, R. — Station Commander"
-date = "Station Day 855"
-content = "All departments nominal. Crew morale is stable. Alcott ahead on maintenance cycle. Corvan continues stellar survey. Vey has begun analysis of anomalous signal detected at 14.6 GHz — likely instrumental artifact but she insists on a full workup.
+title = "Station Log — Cycle 234"
+author = "Cmdr. N. Hadid — Commander"
+date = "Cycle 234"
+content = "Weekly status. Systems nominal. Power at 74%. Provisions through Cycle 400.
 
-Supply delivery on schedule. Earth comms normal.
-Nothing to report."
+Approved Corvan's request to extend signal monitoring to 22 hours per cycle, on the condition that Vey actually sleeps. He agreed. I have my doubts.
+
+Alcott organized another film night. I've been informed my selection privileges have been permanently revoked. For the record, Das Boot is a perfectly good film.
+
+Earth hasn't responded to our nav-data request from Cycle 198. Week 5 of 9. Nothing unusual about the delay but I'd like it on record that I noticed."
 category = "early"
 sort_order = 3

@@ -5,13 +5,19 @@
 [resource]
 script = ExtResource("1_script")
 log_id = "log_008_alcott_cold_spot"
-title = "Cold Spot"
-author = "Alcott, M. — Engineer"
-date = "Station Day 878"
-content = "Found something I can't explain during exterior sensor check. Hull section 14-D, starboard observation deck wall, is reading -271.3 degrees Celsius. That's within two degrees of absolute zero.
+title = "Station Log — Cycle 318"
+author = "Cmdr. N. Hadid — Commander"
+date = "Cycle 318"
+content = "Weekly status. Power nominal. Life support nominal.
 
-Space is cold but not that cold. Our hull insulation should keep readings around -40C on exterior plates. Something is pulling the heat out of that section. Or something on the other side of that wall is very, very cold.
+Stellar absence count: thirty-one. Corvan has systematically ruled out sensor error, parallax, and interstellar medium occultation. She says she has no explanation that doesn't require \"rethinking some assumptions.\" I asked her which assumptions. She said she'd rather not say yet.
 
-Corvan spends most of his time in the observation deck now. He doesn't blink enough."
+No confirmation from Earth on any outbound transmission since Cycle 260. That's fifty-eight days. Relay equipment is functional — I've had Alcott verify it three times. The signals are leaving the station. Whether they're arriving anywhere is another question.
+
+Vey has been working around the clock. I've spoken to him about rest protocols. He told me he's \"close to something\" and asked me not to reassign his monitoring hours. Against my better judgment, I agreed.
+
+Alcott mentioned something offhand yesterday. Said she ran a thermal scan on the hull — routine — and found a cold spot on the portside lower deck. Below ambient vacuum temperature. I asked her what that meant. She said she didn't know, but that it shouldn't be possible.
+
+I didn't ask her to elaborate. I probably should have."
 category = "late"
 sort_order = 8

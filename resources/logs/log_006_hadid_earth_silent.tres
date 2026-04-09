@@ -5,15 +5,21 @@
 [resource]
 script = ExtResource("1_script")
 log_id = "log_006_hadid_earth_silent"
-title = "Earth Silent"
-author = "Hadid, R. — Station Commander"
-date = "Station Day 874"
-content = "Earth has not responded to hails in 72 hours. All channels silent. Relay stations at Proxima and Barnard's — also silent.
+title = "Maintenance Log — Cycle 278"
+author = "R. Alcott — Engineer"
+date = "Cycle 278"
+content = "Ran the optical array diagnostic. Ran it twice, actually, because I didn't believe the first one.
 
-I've ordered Alcott to run full diagnostics on our comm array. He says it's functioning perfectly. We're transmitting. Nobody's answering.
+Array is fine. Calibration within spec. I pulled two sensor modules, replaced them with spares, re-ran everything from scratch. Same result.
 
-I'm keeping this from the crew for now. Corvan is already on edge about his \"vanishing stars\" — and frankly, after looking at his data, so am I.
+Seventeen stellar objects from the baseline are gone. That's three more than when Elise first noticed. In less than thirty days.
 
-We are alone out here."
-category = "late"
+I told Nasir. He asked me if stars can leave sensor range in 278 days. I said no, not at these distances, not unless something is wrong with our equipment. He asked me what's wrong with our equipment. I said nothing. Everything checks out.
+
+He went quiet for a bit and then told me to log it.
+
+So here I am. Logging it.
+
+The coffee machine also died, by the way. Held a small funeral. Tomas said a few words. It was beautiful."
+category = "middle"
 sort_order = 6

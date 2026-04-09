@@ -5,19 +5,19 @@
 [resource]
 script = ExtResource("1_script")
 log_id = "log_010_hadid_abort"
-title = "Mission Abort — Emergency Protocol EVENTIDE"
-author = "Hadid, R. — Station Commander"
-date = "Station Day 881"
-content = "This is Commander Hadid declaring Mission Abort under Emergency Protocol EVENTIDE.
+title = "Personal Log — Cycle 341"
+author = "R. Alcott — Engineer"
+date = "Cycle 341"
+content = "I don't know who I'm recording this for anymore. Maybe just me. Maybe whoever finds this place after we leave. If we leave.
 
-78% of observable sky from Kairos is now dark. Earth is silent. All relay stations silent. Vey's signal has increased in intensity by a factor of 400 since first contact and is now detectable on EVERY frequency simultaneously. Corvan is unresponsive. Alcott reports hull temperature anomalies spreading across the station.
+Elise spends most of her time on observation now. She brings her datapad. Nasir asked her what she's working on and she said \"monitoring the boundary.\" I walked by later and looked at her screen. It was off. She was just standing at the window with her hand on the glass.
 
-I am arming the emergency broadband relay for a final transmission to any surviving outpost. If you are receiving this: do not send a signal. Do not reply. Do not look at the dark for too long.
+Tomas hasn't eaten a proper meal in three days. He keeps saying the signal is \"responsive\" and when I asked what that means he looked at me like I'd asked him to explain what breathing is. Like the answer was so obvious it wasn't worth giving.
 
-Something in the void looked back, and it is coming.
+Nasir is holding it together. He files his reports. He checks the systems. He follows his routines. But he sleeps with the lights on now. I know because I walk the halls at night sometimes — I can see it under his door.
 
-God help us all.
+I ran the hull thermal scan again. The cold spot on portside lower deck is still there. Slightly larger. I keep thinking about what could cause a patch of hull to be colder than the vacuum around it. Vacuum doesn't work like that. There's nothing on the other side of that wall to pull heat away.
 
-Hadid out."
-category = "final"
+There's nothing on the other side of that wall at all."
+category = "late"
 sort_order = 10

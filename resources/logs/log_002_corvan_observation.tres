@@ -5,13 +5,15 @@
 [resource]
 script = ExtResource("1_script")
 log_id = "log_002_corvan_observation"
-title = "First Observation"
-author = "Corvan, J. — Stellar Observer"
-date = "Station Day 851"
-content = "Calibrated the Deckard array this morning. All nominal. Barnard's Star holding steady at magnitude 9.54.
+title = "Research Log — Cycle 203"
+author = "Dr. E. Corvan — Research"
+date = "Cycle 203"
+content = "Tomas has found something interesting in the signal — a repeating structure in the low-frequency band. Could be natural, could be significant. I told him to rule out instrumental echo before he gets excited and he called me \"aggressively reasonable,\" which I'm choosing to take as a compliment.
 
-I love the quiet out here. You can almost forget how far from home we are. Almost. On clear shifts I just sit and watch the field. Stars everywhere. More stars than darkness.
+Spent my lunch break on the observation deck. I keep coming back to it and I'm not entirely sure why. The briefing called this region \"low stellar density,\" which is technically accurate the way calling the ocean \"damp\" is technically accurate. There is nothing out here. In every direction you'd expect background stars, there's just — black. Not empty black. Full black. Like looking at a surface.
 
-That's how it should be."
+I tried photographing it for my personal research file. The images just look like a lens cap was left on. But when you're standing there, it doesn't look like that at all. Your eyes want to adjust to something that isn't there.
+
+I told Rin about it and she said \"yeah it's weird right?\" and went back to fixing the coffee machine. Healthy response, probably."
 category = "early"
 sort_order = 2
