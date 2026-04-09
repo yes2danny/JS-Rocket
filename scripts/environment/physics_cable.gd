@@ -80,7 +80,6 @@ func _create_anchor(pos: Vector3, animatable: bool) -> PhysicsBody3D:
 		body = AnimatableBody3D.new()
 	else:
 		body = StaticBody3D.new()
-	body.global_position = pos
 	body.collision_layer = 0
 	body.collision_mask = 0
 	# Small sphere for the joint to attach to
@@ -97,7 +96,9 @@ func _create_anchor(pos: Vector3, animatable: bool) -> PhysicsBody3D:
 	mesh.material = _cable_material
 	mesh_inst.mesh = mesh
 	body.add_child(mesh_inst)
+	# Must add to tree before setting global_position
 	add_child(body)
+	body.global_position = pos
 	return body
 
 
@@ -106,7 +107,6 @@ func _create_segment(pos: Vector3) -> RigidBody3D:
 	body.mass = cable_mass
 	body.linear_damp = cable_damping
 	body.angular_damp = cable_damping
-	body.global_position = pos
 	body.collision_layer = 0
 	body.collision_mask = 0
 	# Physics shape
@@ -123,7 +123,9 @@ func _create_segment(pos: Vector3) -> RigidBody3D:
 	mesh.material = _cable_material
 	mesh_inst.mesh = mesh
 	body.add_child(mesh_inst)
+	# Must add to tree before setting global_position
 	add_child(body)
+	body.global_position = pos
 	return body
 
 

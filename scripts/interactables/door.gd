@@ -11,7 +11,7 @@ extends InteractableBase
 @export var door_color: Color = Color(1, 0.3, 0.1)
 @export var use_panel_only: bool = false  ## If true, door can't be opened directly
 
-@onready var door_panel: Node3D = $DoorPanel
+@onready var door_panel: AnimatableBody3D = $DoorPanel
 var closed_y: float
 var open_y: float
 var target_y: float

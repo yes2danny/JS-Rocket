@@ -9,7 +9,11 @@ const HEAD_BOB_AMP := 0.04
 const FOOTSTEP_INTERVAL_WALK := 0.55
 const FOOTSTEP_INTERVAL_SPRINT := 0.35
 
+var has_flashlight: bool = false
+
 @onready var head: Node3D = $Head
+@onready var hand: Node3D = $Head/Camera3D/Hand
+@onready var flashlight_light: SpotLight3D = $Head/Camera3D/Hand/FlashlightLight
 var head_bob_timer: float = 0.0
 var footstep_timer: float = 0.0
 var head_bob_base_y: float
@@ -17,6 +21,11 @@ var head_bob_base_y: float
 
 func _ready() -> void:
 	head_bob_base_y = head.position.y
+
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("toggle_flashlight") and has_flashlight:
+		flashlight_light.visible = !flashlight_light.visible
 
 
 func _physics_process(delta: float) -> void:
@@ -64,3 +73,10 @@ func _physics_process(delta: float) -> void:
 func _play_footstep() -> void:
 	# AudioManager handles null streams gracefully
 	pass
+
+
+func pickup_flashlight() -> void:
+	has_flashlight = true
+	flashlight_light.visible = true
+	if hand.has_node("FlashlightMesh"):
+		hand.get_node("FlashlightMesh").visible = true

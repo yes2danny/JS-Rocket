@@ -12,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="Crosshair" type="ColorRect" parent="Control"]
 layout_mode = 1
@@ -26,6 +27,7 @@ offset_right = 1.5
 offset_bottom = 1.5
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0.7, 0.7, 0.7, 0.6)
 
 [node name="InteractionPrompt" type="Label" parent="Control"]
@@ -41,6 +43,7 @@ offset_right = 150.0
 offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 text = "[E] Interact"
 horizontal_alignment = 1
 vertical_alignment = 1

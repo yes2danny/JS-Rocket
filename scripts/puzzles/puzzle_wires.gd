@@ -10,7 +10,7 @@ const WIRE_COLORS := [
 ]
 const WIRE_NAMES := ["RED", "BLUE", "YLW", "GRN"]
 # Right side is shuffled: Green, Red, Yellow, Blue
-const RIGHT_ORDER := [3, 0, 2, 1]
+const RIGHT_ORDER: Array[int] = [3, 0, 2, 1]
 
 var left_buttons: Array[Button] = []
 var right_buttons: Array[Button] = []
@@ -97,7 +97,7 @@ func _build_ui() -> void:
 	left_col.add_child(src_label)
 
 	for i in 4:
-		var btn := _make_wire_button(WIRE_COLORS[i], WIRE_NAMES[i], true)
+		var btn: Button = _make_wire_button(WIRE_COLORS[i], WIRE_NAMES[i], true)
 		btn.pressed.connect(_on_left_pressed.bind(i))
 		left_col.add_child(btn)
 		left_buttons.append(btn)
@@ -115,8 +115,8 @@ func _build_ui() -> void:
 	right_col.add_child(tgt_label)
 
 	for i in 4:
-		var color_idx := RIGHT_ORDER[i]
-		var btn := _make_wire_button(WIRE_COLORS[color_idx], "? ? ?", false)
+		var color_idx: int = RIGHT_ORDER[i]
+		var btn: Button = _make_wire_button(WIRE_COLORS[color_idx], "? ? ?", false)
 		btn.pressed.connect(_on_right_pressed.bind(i))
 		right_col.add_child(btn)
 		right_buttons.append(btn)
@@ -188,7 +188,7 @@ func _on_right_pressed(right_idx: int) -> void:
 	if is_solved or selected_left == -1:
 		return
 
-	var right_color_idx := RIGHT_ORDER[right_idx]
+	var right_color_idx: int = RIGHT_ORDER[right_idx]
 
 	if right_color_idx == selected_left:
 		# Correct match!

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://station_kairos"]
+[gd_scene load_steps=25 format=3 uid="uid://station_kairos"]
 
 [ext_resource type="Material" path="res://resources/materials/wall_dark.tres" id="1_wall"]
 [ext_resource type="Material" path="res://resources/materials/floor_grate.tres" id="2_floor"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://puzzle_circuit" path="res://scenes/puzzles/puzzle_circuit_routing.tscn" id="13_puzzle_circuit"]
 [ext_resource type="PackedScene" uid="uid://puzzle_wires" path="res://scenes/puzzles/puzzle_wires.tscn" id="14_puzzle_wires"]
 [ext_resource type="PackedScene" uid="uid://puzzle_dial" path="res://scenes/puzzles/puzzle_dial.tscn" id="15_puzzle_dial"]
+[ext_resource type="PackedScene" uid="uid://flashlight_pickup_scene" path="res://scenes/interactables/flashlight_pickup.tscn" id="16_flashlight"]
 
 [sub_resource type="StandardMaterial3D" id="Material_void_window"]
 albedo_color = Color(0.0, 0.0, 0.0, 1)
@@ -124,6 +125,9 @@ light_color = Color(0.6, 0.55, 0.5, 1)
 light_energy = 0.4
 shadow_enabled = true
 omni_range = 8.0
+
+[node name="FlashlightPickup" parent="Hub" instance=ExtResource("16_flashlight")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.05, 1.0)
 
 ; =============================================
 ; CORRIDOR NORTH (Hub → Bridge) — Z negative
