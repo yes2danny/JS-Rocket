@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://station_kairos"]
+[gd_scene load_steps=24 format=3 uid="uid://station_kairos"]
 
 [ext_resource type="Material" path="res://resources/materials/wall_dark.tres" id="1_wall"]
 [ext_resource type="Material" path="res://resources/materials/floor_grate.tres" id="2_floor"]
@@ -11,6 +11,10 @@
 [ext_resource type="Material" path="res://resources/materials/emergency_light.tres" id="9_emergency"]
 [ext_resource type="PackedScene" uid="uid://access_panel_scene" path="res://scenes/interactables/access_panel.tscn" id="10_panel"]
 [ext_resource type="PackedScene" uid="uid://physics_cable_scene" path="res://scenes/environment/physics_cable.tscn" id="11_cable"]
+[ext_resource type="PackedScene" uid="uid://puzzle_pattern" path="res://scenes/puzzles/puzzle_pattern_memory.tscn" id="12_puzzle_pattern"]
+[ext_resource type="PackedScene" uid="uid://puzzle_circuit" path="res://scenes/puzzles/puzzle_circuit_routing.tscn" id="13_puzzle_circuit"]
+[ext_resource type="PackedScene" uid="uid://puzzle_wires" path="res://scenes/puzzles/puzzle_wires.tscn" id="14_puzzle_wires"]
+[ext_resource type="PackedScene" uid="uid://puzzle_dial" path="res://scenes/puzzles/puzzle_dial.tscn" id="15_puzzle_dial"]
 
 [sub_resource type="StandardMaterial3D" id="Material_void_window"]
 albedo_color = Color(0.0, 0.0, 0.0, 1)
@@ -662,29 +666,33 @@ use_panel_only = true
 ; Player must find the right panel to open each door
 ; =============================================
 
-; GREEN panel for Bridge door — on hub north wall, right of doorway
+; GREEN panel for Bridge door — PATTERN MEMORY puzzle
 [node name="PanelNorth" parent="." instance=ExtResource("10_panel")]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 1.8, 1.2, -4.95)
 target_door_path = NodePath("../DoorNorth")
 panel_color = Color(0.1, 0.85, 0.3, 1)
+puzzle_scene = ExtResource("12_puzzle_pattern")
 
-; ORANGE panel for Engineering door — on hub south wall, left of doorway
+; ORANGE panel for Engineering door — CIRCUIT ROUTING puzzle
 [node name="PanelSouth" parent="." instance=ExtResource("10_panel")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, 1.2, 4.95)
 target_door_path = NodePath("../DoorSouth")
 panel_color = Color(1.0, 0.5, 0.1, 1)
+puzzle_scene = ExtResource("13_puzzle_circuit")
 
-; BLUE panel for Crew Quarters door — on hub east wall, beside doorway
+; BLUE panel for Crew Quarters door — WIRE MATCHING puzzle
 [node name="PanelEast" parent="." instance=ExtResource("10_panel")]
 transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, 4.95, 1.2, -1.8)
 target_door_path = NodePath("../DoorEast")
 panel_color = Color(0.2, 0.5, 1.0, 1)
+puzzle_scene = ExtResource("14_puzzle_wires")
 
-; RED panel for Observation door — in west corridor, near observation end
+; RED panel for Observation door — DIAL TUNING puzzle (requires power first)
 [node name="PanelObservation" parent="CorridorWest" instance=ExtResource("10_panel")]
 transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -2.5, 1.2, -1.3)
 target_door_path = NodePath("../../ObservationDeck/DoorObservation")
 panel_color = Color(0.9, 0.1, 0.1, 1)
+puzzle_scene = ExtResource("15_puzzle_dial")
 
 ; =============================================
 ; PHYSICS CABLES — real physics ropes connecting

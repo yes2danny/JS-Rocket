@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://puzzle_dial"]
+
+[ext_resource type="Script" path="res://scripts/puzzles/puzzle_dial.gd" id="1_script"]
+
+[node name="PuzzleDial" type="CanvasLayer"]
+script = ExtResource("1_script")
