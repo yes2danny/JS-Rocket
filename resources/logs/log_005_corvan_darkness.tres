@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="LogEntry" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/log_entry.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+log_id = "log_005_corvan_darkness"
+title = "Station Log — Cycle 269"
+author = "Cmdr. N. Hadid — Commander"
+date = "Cycle 269"
+content = "Addendum.
+
+Corvan flagged a discrepancy in the long-range imaging data. Fourteen stellar objects from our Cycle 003 baseline are no longer visible. She's requested a diagnostic on the optical array. Alcott has been assigned.
+
+Likely sensor drift. Logging for completeness.
+
+Earth still hasn't acknowledged our Cycle 198 request. Week 8. I've sent a follow-up."
+category = "middle"
+sort_order = 5

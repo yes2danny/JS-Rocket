@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://physics_cable_scene"]
+
+[ext_resource type="Script" path="res://scripts/environment/physics_cable.gd" id="1_cable"]
+
+; =================================================================
+; PHYSICS CABLE — connects an access panel to a door.
+; Set start_anchor_path to the panel's CableAnchor Marker3D.
+; Set end_anchor_path to the door's CableAnchor Marker3D.
+; Set cable_color to match the panel/door color.
+; Cable segments are generated at runtime with real physics.
+; =================================================================
+
+[node name="PhysicsCable" type="Node3D"]
+script = ExtResource("1_cable")

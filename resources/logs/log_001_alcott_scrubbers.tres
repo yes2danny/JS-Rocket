@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="LogEntry" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/log_entry.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+log_id = "log_001_alcott_scrubbers"
+title = "Maintenance Log — Cycle 189"
+author = "R. Alcott — Engineer"
+date = "Cycle 189"
+content = "Swapped the membrane in scrubber 2 before it had the chance to ruin my night. You're welcome, everyone who enjoys breathing.
+
+Tomas wants me to look at antenna C again. I've told him three times there's nothing wrong with it. He keeps saying the signal \"sounds different\" depending on the time of day, and I keep telling him that's not how antennas work. He does this thing where he nods like he's listening and then asks me the same question a week later. Love that for me.
+
+Elise left her glasses in bay 4. Again. I moved them before she sat on them. She owes me like nine pairs of glasses at this point.
+
+Movie night is Thursday. If Nasir picks another submarine documentary I'm staging a mutiny."
+category = "early"
+sort_order = 1

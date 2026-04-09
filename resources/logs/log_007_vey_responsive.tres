@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="LogEntry" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/log_entry.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+log_id = "log_007_vey_responsive"
+title = "Personal Log — Cycle 303"
+author = "Dr. E. Corvan — Research"
+date = "Cycle 303"
+content = "I've given up photographing the view from observation. Not because it isn't remarkable — it is — but because there's something about it that doesn't survive being captured. In a photo it's just dark. In person it feels like... I keep coming back to the word \"finished.\" Like the dark out there isn't empty. It's complete. It doesn't need anything in it.
+
+That's not scientific. I know that. I'm allowing myself one unscientific observation per log entry as a treat.
+
+Tomas played me an audio render of the signal yesterday. He converted the low-band structure into audible frequencies and wanted my reaction. I sat with it for a while. I didn't have an immediate analysis. The closest I can describe it: you know when you're alone in a house and you're suddenly certain there's someone in the next room? Not because you heard anything. You just know. It sounded like that feeling. Like the space right before someone speaks.
+
+I told Tomas to keep working on it. He didn't seem satisfied with that answer.
+
+I went back to observation after. Stayed about two hours. Meant to stay twenty minutes."
+category = "late"
+sort_order = 7

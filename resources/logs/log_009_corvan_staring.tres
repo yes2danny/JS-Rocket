@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="LogEntry" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/log_entry.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+log_id = "log_009_corvan_staring"
+title = "Personal Log — Cycle 334"
+author = "T. Vey — Signal Analyst"
+date = "Cycle 334"
+content = "Okay. I need to write this down so I can look at it and decide if I've lost my mind.
+
+I ran an interaction test on the signal. Basic procedure — shift your receiver parameters and see if the source changes. It shouldn't. That's the whole point. A signal doesn't know you're listening. That's like... that's foundational. Day one stuff. Radio waves don't care about you.
+
+The signal cared.
+
+I shifted to the upper band. Within forty seconds the low-band structure reorganized. I shifted back. It returned to baseline — almost. There were new elements. Additions. Like it was showing me something it hadn't shown me before.
+
+I repeated the test six times. Six. Every single time I changed what I was doing, the signal adjusted. Not randomly. Responsively. The same way you'd speak louder if you saw someone cupping their ear.
+
+I haven't told anyone. I'm going to run it again tomorrow. And maybe the day after. Because the alternative to \"I'm wrong\" is something I'm not ready to put into words yet."
+category = "late"
+sort_order = 9

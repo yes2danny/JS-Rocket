@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://switch_scene"]
+
+[ext_resource type="Script" path="res://scripts/interactables/switch.gd" id="1_switch"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_switch"]
+size = Vector3(0.3, 0.4, 0.15)
+
+[sub_resource type="StandardMaterial3D" id="Material_switch_base"]
+albedo_color = Color(0.1, 0.1, 0.12, 1)
+metallic = 0.6
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="Material_lever"]
+albedo_color = Color(0.6, 0.15, 0.1, 1)
+metallic = 0.5
+roughness = 0.3
+
+; =================================================================
+; SWITCH — How to plug in your own model:
+;   1. Replace children of "PlaceholderModel" with your switch base model
+;   2. Put your lever/handle mesh inside "LeverPivot" (replace the CSGBox3D)
+;      The script rotates LeverPivot — anything inside it rotates with it.
+;   3. Resize CollisionShape3D to match your model's bounds for raycast.
+; =================================================================
+
+[node name="Switch" type="StaticBody3D"]
+script = ExtResource("1_switch")
+interaction_prompt = "Flip Switch"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+shape = SubResource("BoxShape3D_switch")
+
+[node name="PlaceholderModel" type="Node3D" parent="."]
+
+[node name="BaseMesh" type="CSGBox3D" parent="PlaceholderModel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+size = Vector3(0.3, 0.4, 0.1)
+material = SubResource("Material_switch_base")
+
+[node name="LeverPivot" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -0.06)
+
+[node name="PlaceholderLever" type="CSGBox3D" parent="LeverPivot"]
+size = Vector3(0.06, 0.2, 0.06)
+material = SubResource("Material_lever")

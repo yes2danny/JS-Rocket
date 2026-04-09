@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="LogEntry" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/log_entry.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+log_id = "log_006_hadid_earth_silent"
+title = "Maintenance Log — Cycle 278"
+author = "R. Alcott — Engineer"
+date = "Cycle 278"
+content = "Ran the optical array diagnostic. Ran it twice, actually, because I didn't believe the first one.
+
+Array is fine. Calibration within spec. I pulled two sensor modules, replaced them with spares, re-ran everything from scratch. Same result.
+
+Seventeen stellar objects from the baseline are gone. That's three more than when Elise first noticed. In less than thirty days.
+
+I told Nasir. He asked me if stars can leave sensor range in 278 days. I said no, not at these distances, not unless something is wrong with our equipment. He asked me what's wrong with our equipment. I said nothing. Everything checks out.
+
+He went quiet for a bit and then told me to log it.
+
+So here I am. Logging it.
+
+The coffee machine also died, by the way. Held a small funeral. Tomas said a few words. It was beautiful."
+category = "middle"
+sort_order = 6

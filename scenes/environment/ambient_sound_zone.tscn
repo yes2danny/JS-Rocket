@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://ambient_sound_zone_scene"]
+
+[ext_resource type="Script" path="res://scripts/environment/ambient_sound_zone.gd" id="1_ambient"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_zone"]
+size = Vector3(10, 4, 10)
+
+[node name="AmbientSoundZone" type="Area3D"]
+script = ExtResource("1_ambient")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_zone")

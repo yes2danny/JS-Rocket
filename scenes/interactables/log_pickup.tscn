@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://log_pickup_scene"]
+
+[ext_resource type="Script" path="res://scripts/interactables/log_pickup.gd" id="1_log_pickup"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_datapad"]
+size = Vector3(0.2, 0.02, 0.3)
+
+[sub_resource type="StandardMaterial3D" id="Material_datapad"]
+albedo_color = Color(0.05, 0.05, 0.07, 1)
+emission_enabled = true
+emission = Color(0.0, 0.2, 0.15, 1)
+emission_energy_multiplier = 0.8
+metallic = 0.8
+roughness = 0.3
+
+; =================================================================
+; LOG PICKUP — How to plug in your own datapad model:
+;   1. Delete the children of "PlaceholderModel"
+;   2. Drag your .glb/.tscn model as a child of PlaceholderModel
+;   3. Resize CollisionShape3D to match your model's bounds
+;   The script sets visible=false on the root when picked up — your
+;   model will disappear automatically. No code changes needed.
+; =================================================================
+
+[node name="LogPickup" type="StaticBody3D"]
+script = ExtResource("1_log_pickup")
+interaction_prompt = "Pick Up Datapad"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_datapad")
+
+[node name="PlaceholderModel" type="Node3D" parent="."]
+
+[node name="DatapadMesh" type="CSGBox3D" parent="PlaceholderModel"]
+size = Vector3(0.2, 0.02, 0.3)
+material = SubResource("Material_datapad")

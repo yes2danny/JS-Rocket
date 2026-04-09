@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="LogEntry" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/log_entry.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+log_id = "log_010_hadid_abort"
+title = "Personal Log — Cycle 341"
+author = "R. Alcott — Engineer"
+date = "Cycle 341"
+content = "I don't know who I'm recording this for anymore. Maybe just me. Maybe whoever finds this place after we leave. If we leave.
+
+Elise spends most of her time on observation now. She brings her datapad. Nasir asked her what she's working on and she said \"monitoring the boundary.\" I walked by later and looked at her screen. It was off. She was just standing at the window with her hand on the glass.
+
+Tomas hasn't eaten a proper meal in three days. He keeps saying the signal is \"responsive\" and when I asked what that means he looked at me like I'd asked him to explain what breathing is. Like the answer was so obvious it wasn't worth giving.
+
+Nasir is holding it together. He files his reports. He checks the systems. He follows his routines. But he sleeps with the lights on now. I know because I walk the halls at night sometimes — I can see it under his door.
+
+I ran the hull thermal scan again. The cold spot on portside lower deck is still there. Slightly larger. I keep thinking about what could cause a patch of hull to be colder than the vacuum around it. Vacuum doesn't work like that. There's nothing on the other side of that wall to pull heat away.
+
+There's nothing on the other side of that wall at all."
+category = "late"
+sort_order = 10

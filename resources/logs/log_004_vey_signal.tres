@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="LogEntry" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/log_entry.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+log_id = "log_004_vey_signal"
+title = "Personal Log — Cycle 251"
+author = "T. Vey — Signal Analyst"
+date = "Cycle 251"
+content = "I can't sleep so I'm talking to my log like it's my therapist. Hi, log. How's your day. Mine's weird.
+
+The structure in the low-band signal — it's not just repeating. It's nested. Patterns inside patterns. And the nested ones modify the parent pattern. Not like interference or echo. More like... okay, imagine someone speaking a sentence. Then imagine someone speaking a sentence inside that sentence that changes what the first one means. That's what this looks like.
+
+I ran a complexity analysis and it came back higher than anything in our database. Higher than pulsars. Higher than magnetar bursts. And it's organized. Not randomly complex. Structured complex.
+
+I know what I think this means and I know how it sounds so I'm not going to say it yet. Not until I have more data. Elise would tell me to rule out instrumental echo. Which — no. This is not echo. Echo doesn't have grammar.
+
+One more week. Then I'll tell the others."
+category = "middle"
+sort_order = 4

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="LogEntry" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/log_entry.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+log_id = "log_002_corvan_observation"
+title = "Research Log — Cycle 203"
+author = "Dr. E. Corvan — Research"
+date = "Cycle 203"
+content = "Tomas has found something interesting in the signal — a repeating structure in the low-frequency band. Could be natural, could be significant. I told him to rule out instrumental echo before he gets excited and he called me \"aggressively reasonable,\" which I'm choosing to take as a compliment.
+
+Spent my lunch break on the observation deck. I keep coming back to it and I'm not entirely sure why. The briefing called this region \"low stellar density,\" which is technically accurate the way calling the ocean \"damp\" is technically accurate. There is nothing out here. In every direction you'd expect background stars, there's just — black. Not empty black. Full black. Like looking at a surface.
+
+I tried photographing it for my personal research file. The images just look like a lens cap was left on. But when you're standing there, it doesn't look like that at all. Your eyes want to adjust to something that isn't there.
+
+I told Rin about it and she said \"yeah it's weird right?\" and went back to fixing the coffee machine. Healthy response, probably."
+category = "early"
+sort_order = 2

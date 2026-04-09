@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="LogEntry" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/log_entry.gd" id="1_script"]
+
+[resource]
+script = ExtResource("1_script")
+log_id = "log_003_hadid_status"
+title = "Station Log — Cycle 234"
+author = "Cmdr. N. Hadid — Commander"
+date = "Cycle 234"
+content = "Weekly status. Systems nominal. Power at 74%. Provisions through Cycle 400.
+
+Approved Corvan's request to extend signal monitoring to 22 hours per cycle, on the condition that Vey actually sleeps. He agreed. I have my doubts.
+
+Alcott organized another film night. I've been informed my selection privileges have been permanently revoked. For the record, Das Boot is a perfectly good film.
+
+Earth hasn't responded to our nav-data request from Cycle 198. Week 5 of 9. Nothing unusual about the delay but I'd like it on record that I noticed."
+category = "early"
+sort_order = 3
